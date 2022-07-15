@@ -1,0 +1,33 @@
+{
+  "name": "github-repo-recommendation-writer",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A simple CLI experiment that writes recommendation of GitHub repository/project in form of tweet. Powered by OpenAI GPT-3.",
+  "author": "Viktor Bezdek <viktor.bezdek@gmail.com>",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "gpt-3",
+    "twitter",
+    "cli",
+    "nlg",
+    "nlp",
+    "github"
+  ],
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@varandas/fetch-readme": "^1.0.9",
+    "article-parser": "^6.0.1",
+    "dotenv": "^16.0.1",
+    "got": "^12.1.0",
+    "inquirer": "^9.0.0",
+    "openai": "^3.0.0",
+    "random": "^3.0.6",
+    "remark": "^14.0.2",
+    "strip-markdown": "^5.0.0",
+    "twitter": "^1.7.1"
+  }
+}

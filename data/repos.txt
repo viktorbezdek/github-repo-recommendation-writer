@@ -1,0 +1,3 @@
+pmndrs/react-three-flex
+trpc/trpc
+plotly/dash
