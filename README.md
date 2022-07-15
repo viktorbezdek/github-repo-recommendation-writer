@@ -2,6 +2,8 @@
 
 > A simple CLI experiment that writes recommendation of GitHub repository/project in form of tweet. Powered by OpenAI GPT-3.
 
+![](./demo.gif)
+
 Prerequisites:
 
 - Node 17.5+ (or higher)
