@@ -97,15 +97,6 @@ function postTweet(tweetText) {
   })
 }
 
-/**
-    Remove all URLs from a string.
-    @param string - The string to remove URLs from.
-    @returns a string with all the URLs removed.
-    */
-function removeUrlsFromString(string) {
-  return string.replace(/https?:\/\/\S+/g, "")
-}
-
 /* It's using the OpenAI API to generate a tweet based on the input data. */
 async function composeTweet(inputData) {
   try {
@@ -125,7 +116,7 @@ async function composeTweet(inputData) {
     return `${response.data.choices[0].text}
 ${inputData.href}`
   } catch (error) {
-    console.error(error.message)
+    console.error(`❌ ${error.message}`)
     process.exit(1)
   }
 }
@@ -176,10 +167,11 @@ async function main() {
       return postTweet(tweet)
     }
   } catch (e) {
-    console.error(e)
+    console.error(`❌ ${e.message}`)
+		process.exit(1)
   }
 
   return main()
 }
 
-main().then(() => console.log("✅ Done"))
+main().then(() => console.log("✅ Tweet posted!"))
